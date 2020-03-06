@@ -1,6 +1,9 @@
 # streaming_calc
 Bandwidth calculation for streaming server
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sycured_streaming_calc&metric=alert_status)](https://sonarcloud.io/dashboard?id=sycured_streaming_calc)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=sycured_streaming_calc&metric=code_smells)](https://sonarcloud.io/dashboard?id=sycured_streaming_calc)
+
 ## Usage
 
 ### Determine necessary server bandwidth
