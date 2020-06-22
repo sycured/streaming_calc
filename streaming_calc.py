@@ -40,12 +40,12 @@ def main():
     )
     parser_bwserver.add_argument(
         'nblisteners',
-        type=int,
+        type=float,
         help='number of listeners'
     )
     parser_bwserver.add_argument(
         'bitrate',
-        type=int,
+        type=float,
         help='bitrate in kb/s'
     )
     parser_bwserver.set_defaults(func=bw_server)
@@ -56,19 +56,19 @@ def main():
     )
     parser_serverusagebw.add_argument(
         'nblisteners',
-        type=int,
+        type=float,
         help='number of listeners')
     parser_serverusagebw.add_argument(
         'bitrate',
-        type=int,
+        type=float,
         help='bitrate in kb/s')
     parser_serverusagebw.add_argument(
         'nbdays',
-        type=int,
+        type=float,
         help='number of days')
     parser_serverusagebw.add_argument(
         'nbhours',
-        type=int,
+        type=float,
         help='number of hours by days (integer only)')
     parser_serverusagebw.set_defaults(func=server_usage_bw)
 
