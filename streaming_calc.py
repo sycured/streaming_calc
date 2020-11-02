@@ -10,7 +10,7 @@ from sys import argv, exit
 def bw_server(args_bw_server):
     """Determine necessary server bandwidth."""
     sum_bw_server = \
-        args_bw_server.nblisteners * args_bw_server.bitrate * 1000 / 1024
+        125 * args_bw_server.nblisteners * args_bw_server.bitrate / 128
     print(f"""Number of listeners: {args_bw_server.nblisteners}
 Bitrate (kb/s): {args_bw_server.bitrate}
 Server bandwidth (Mib/s): {sum_bw_server}""")
@@ -19,9 +19,9 @@ Server bandwidth (Mib/s): {sum_bw_server}""")
 def server_usage_bw(args_server_usage_bw):
     """Determine the amount of data used for the streaming."""
     sum_server_usage_bw = \
-        args_server_usage_bw.nbdays * args_server_usage_bw.nbhours * \
-        3600 * args_server_usage_bw.bitrate * 1000 / 8 * \
-        args_server_usage_bw.nblisteners / 1024 / 1024
+        28125 * args_server_usage_bw.nbdays * args_server_usage_bw.nbhours * \
+        args_server_usage_bw.bitrate * \
+        args_server_usage_bw.nblisteners / 65536
     print(f"""Number of listeners: {args_server_usage_bw.nblisteners}
 Bitrate (kb/s): {args_server_usage_bw.bitrate}
 Number of days: {args_server_usage_bw.nbdays}
